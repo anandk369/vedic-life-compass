@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Vedic theme colors
+				vedic: {
+					saffron: '#FF9933',
+					sage: '#8A9A5B',
+					sandstone: '#E2C391',
+					terracotta: '#C95A49',
+					ochre: '#CC7722',
+					lotus: '#E83151',
+					purple: '#8D6B94',
+					spiritual: '#904E55',
+					leaf: '#4A6741',
+					earth: '#996633',
+					sky: '#7EC8E3'
 				}
 			},
 			borderRadius: {
@@ -84,11 +99,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'float': {
+					'0%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' },
+					'100%': { transform: 'translateY(0px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s infinite',
+				'float': 'float 6s infinite ease-in-out'
+			},
+			fontFamily: {
+				'vedic': ['Poppins', 'sans-serif'],
+			},
+			backgroundImage: {
+				'mandala-pattern': "url('/img/mandala-bg.svg')",
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			}
 		}
 	},
