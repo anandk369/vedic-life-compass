@@ -3,7 +3,6 @@ import {
   Home,
   Calendar,
   Droplet,
-  Lotus,
   Settings,
   User,
   Clock,
@@ -27,8 +26,28 @@ import {
   type Icon as IconType,
   Flame,
   Wind,
-  LucideIcon
+  Search,
+  LucideIcon,
 } from 'lucide-react';
+
+// Custom lotus icon since it's not provided in lucide-react
+const Lotus = ({ ...props }: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M12 2c0 4.4-4.5 8-10 8 .5 4.5 2.5 8 5 10.5 1.5-2 4-3.5 5-3.5 1 0 3.5 1.5 5 3.5 2.5-2.5 4.5-6 5-10.5-5.5 0-10-3.6-10-8z" />
+    <path d="M12 2c0 4.4 4.5 8 10 8-.5 4.5-2.5 8-5 10.5" />
+  </svg>
+);
 
 // Custom yoga icon
 const Yoga: LucideIcon = (props) => (
@@ -76,4 +95,5 @@ export const Icons = {
   yoga: Yoga,
   flame: Flame,
   wind: Wind,
+  search: Search,
 };
