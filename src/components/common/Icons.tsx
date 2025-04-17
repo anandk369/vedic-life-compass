@@ -27,11 +27,12 @@ import {
   Flame,
   Wind,
   Search,
-  LucideIcon,
+  LucideProps,
 } from 'lucide-react';
+import React, { forwardRef } from 'react';
 
 // Custom lotus icon since it's not provided in lucide-react
-const Lotus = ({ ...props }: React.SVGProps<SVGSVGElement>) => (
+const Lotus = forwardRef<SVGSVGElement, LucideProps>((props, ref) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -42,15 +43,18 @@ const Lotus = ({ ...props }: React.SVGProps<SVGSVGElement>) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    ref={ref}
     {...props}
   >
     <path d="M12 2c0 4.4-4.5 8-10 8 .5 4.5 2.5 8 5 10.5 1.5-2 4-3.5 5-3.5 1 0 3.5 1.5 5 3.5 2.5-2.5 4.5-6 5-10.5-5.5 0-10-3.6-10-8z" />
     <path d="M12 2c0 4.4 4.5 8 10 8-.5 4.5-2.5 8-5 10.5" />
   </svg>
-);
+));
+
+Lotus.displayName = 'Lotus';
 
 // Custom yoga icon
-const Yoga: LucideIcon = (props) => (
+const Yoga = forwardRef<SVGSVGElement, LucideProps>((props, ref) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -61,11 +65,14 @@ const Yoga: LucideIcon = (props) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    ref={ref}
     {...props}
   >
     <path d="M12 4c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zM19 14.9c0-.6-.43-1.4-1.28-1.4-.79 0-1.36.71-1.82 1.43l-2.7 4.6-2.7-4.6c-.46-.72-1.03-1.43-1.82-1.43-.85 0-1.28.8-1.28 1.4 0 .63.76 1.32 1.28 1.94l1.66 2.86-2.42 2.42c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 21.07l2.48 2.48c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-2.42-2.42 1.66-2.86c.52-.62 1.28-1.31 1.28-1.94z" />
   </svg>
-);
+));
+
+Yoga.displayName = 'Yoga';
 
 export const Icons = {
   home: Home,
